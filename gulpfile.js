@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var cp          = require('child_process');
+var compass     = require('gulp-compass');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -54,7 +55,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html'], ['jekyll-rebuild']);
 });
 
 /**
@@ -62,3 +63,28 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+gulp.task('compass', function() {
+  gulp.src('./src/*.scss')
+    .pipe(compass({
+      project: path.join('_scss/main.scss'),
+      css: 'css',
+      sass: 'sass'
+    }))
+    .pipe(gulp.dest('css'));
+});
+/* THIS MIGHT NEED TO BE ADDED FOR BS AND JS
+var gulp = require('gulp');
+var merge = require('gulp-merge');
+
+gulp.task('test', function() {
+    var bootstrap = gulp.src('bootstrap/js/*.js')
+        .pipe(gulp.dest('public/bootstrap'));
+
+    var jquery = gulp.src('jquery.cookie/jquery.cookie.js')
+        .pipe(gulp.dest('public/jquery'));
+
+    return merge(bootstrap, jquery);
+});
+*/
