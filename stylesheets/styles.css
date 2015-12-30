@@ -616,25 +616,19 @@ body {
   line-height: 1em;
 }
 
-/* line 7, ../sass/styles.scss */
-hr {
-  border: 2px solid #BDBDBD;
-  width: 90px;
-}
-
-/* line 11, ../sass/styles.scss */
+/* line 8, ../sass/styles.scss */
 .main-nav {
   background: red;
   width: 100%;
   height: 100%;
 }
-/* line 15, ../sass/styles.scss */
+/* line 13, ../sass/styles.scss */
 .main-nav .fa {
   float: right;
   top: 0;
   right: 0;
 }
-/* line 19, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 .main-nav .fa .nav-items li {
   font-family: "Slabo 27px", Sans-serif;
   font-size: 3em;
@@ -644,66 +638,9 @@ hr {
   display: none;
 }
 
-/* line 29, ../sass/styles.scss */
-.about-container {
-  float: right;
-  clear: both;
-  width: 16%;
-  margin-right: 3%;
-}
-/* line 34, ../sass/styles.scss */
-.about-container .heading {
-  font-family: "Lobster Two", cursive;
-  font-size: 2.8em;
-  color: #80CBC4;
-  margin-bottom: -.08em;
-  text-align: center;
-}
-
-/* line 42, ../sass/styles.scss */
-.cake-wrapper-row-1, .cake-wrapper-row-2 {
-  float: left;
-  margin-top: 2%;
-  margin-left: 1%;
-}
-/* line 46, ../sass/styles.scss */
-.cake-wrapper-row-1 .project-container, .cake-wrapper-row-2 .project-container {
-  display: inline-block;
-  padding: 0 10px;
-  position: relative;
-}
-/* line 51, ../sass/styles.scss */
-.cake-wrapper-row-1 h3, .cake-wrapper-row-2 h3 {
-  position: absolute;
-  top: -10px;
-  left: 1px;
-  background-color: white;
-  color: #F48FB1;
-  padding: 3px;
-  font-family: "Slabo 27px", Sans-serif;
-  font-weight: normal;
-  box-shadow: 1px 2px 1px 2px #BDBDBD;
-}
-
-/* line 66, ../sass/styles.scss */
-.cake-container {
-  clear: both;
-  height: 300px;
-  width: 45%;
-}
-
-/* line 71, ../sass/styles.scss */
-.cake-text-wrap {
-  margin-top: 30px;
-  margin-left: 1%;
-  float: left;
+/* line 27, ../sass/styles.scss */
+.container {
   width: 100%;
-}
-/* line 76, ../sass/styles.scss */
-.cake-text-wrap h2 {
-  font-family: "Lobster Two", cursive;
-  font-size: 2.8em;
-  color: #80CBC4;
-  margin-bottom: -.08em;
-  text-align: center;
+  height: 100%;
+  background-image: url("/images/logo.png");
 }
