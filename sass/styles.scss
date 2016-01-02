@@ -3,29 +3,35 @@
 @import "partials/normalize";
 @import "partials/mixin";
 @import "partials/base";
-
+@import "compass/utilities/sprites";
 
 .main-nav {
-  background: $nav-back;
-  width: 100%;
-  height: 100%;
-
-  .fa {
-    float: right;
-    top: 0;
-    right: 0;
-      .nav-items li {
-        font-family: $body-font;
-        font-size: 3em;
-        text-transform: uppercase;
-        text-align: center;
-        list-style-type: none;
-        display: none;
+  position: fixed;
+  width:100%;
+  z-index:10;
+  background-color: $nav-back;
+  border: 1px solid green;
+  .nav-items {
+    text-align: center;
+    li {
+      display: inline-flex;
+      padding: 10px 20px 0 20px;
+      font-size: 1.4em;
+      color: white;
+      text-transform: uppercase;
+      font-family: $body-font;
+    }
+    i {
+      color: white;
+      text-align: left;
+      margin-left: auto;
     }
   }
 }
 .container {
   width: 100%;
-  height: 100%;
-  background-image: url("/images/logo.png");
+  height: 700px;
+  background:image-url("crown.png")center;
+  background-size: cover;
+  //background: $nav-back;
 }

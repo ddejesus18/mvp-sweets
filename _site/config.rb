@@ -1,6 +1,7 @@
 require 'compass/import-once/activate'
 require 'normalize-scss'
 require 'support-for'
+
 #need the support-for for normalize-scss
 # Require any additional compass plugins here.
 
