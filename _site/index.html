@@ -14,12 +14,13 @@
 </head>
 <body>
   <nav class="main-nav">
+    <i class="fa fa-bars fa-3x" id="open-nav"></i>
+    <i class="fa fa-times fa-3x" id="close-nav"></i>
     <ul class="nav-items">
-      <i class="fa fa-birthday-cake fa-3x"></i>
-    <li><a href="#about"></a>About</li>
-    <li><a href="#cake"></a>Cake</li>
-    <li><a href="#decoration"></a>Decoration</li>
-    <li><a href="#contact"></a>Contact</li>
+    <li id="about" class="item"><a href="#about"></a>About</li>
+    <li id="cake" class="item"><a href="#cake"></a>Cake</li>
+    <li id="decoration" class="item"><a href="#decoration"></a>Decoration</li>
+    <li id="contact" class="item"><a href="#contact"></a>Contact</li>
     </ul>
   </nav>
     <div class="container">
@@ -29,7 +30,34 @@
    <hr />
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+/* The task should be as follow:
+when the bar is clicked, display the nav list and also be able to click on the items and be directed to where those items are located on the page. The nav should toggle to the right slowly */
+
+//var for the button
+var buttonOpen = document.getElementById("open-nav");
+//var for the X of nav when ope
+ var buttonClose = document.getElementById("close-nav");
+
+/* event handler hides and shows various elements */
+
+var handler = function(event) {
+  var elMenu = document.getElementById('nav-items').style.display = "block";
+ var bars = document.getElementById('open-nav').style.display = "none";
+  var buttonClose = document.getElementById("close-nav").style.display = "block";
+}
+buttonOpen.addEventListener('click', handler);
+
+/*event handler for closing the nav Can't get this handler and event to work and I need to figure out if it's because my previous event is targeting the closeButton so it's not displaying what I want it to because it's under the handler task
+var escapeNav = function(event) {
+  var elMenu = document.getElementById('list').style.display ='none';
+}
+
+buttonClose.addEventListener('click', escapeNav); */
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

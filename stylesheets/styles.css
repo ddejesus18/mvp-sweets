@@ -562,27 +562,28 @@ body {
 }
 
 .main-nav {
-  position: fixed;
+  position: absolute;
+  height: 100%;
   width: 100%;
-  z-index: 10;
-  background-color: rgba(192, 192, 192, 0.5);
-  border: 1px solid green;
+}
+.main-nav .fa {
+  float: right;
+  margin-right: 4px;
+  padding: 2px;
+}
+.main-nav #close-nav {
+  display: none;
 }
 .main-nav .nav-items {
+  list-style-type: none;
   text-align: center;
+  background-color: rgba(128, 128, 128, 0.3);
+  position: relative;
+  display: none;
+  cursor: pointer;
 }
-.main-nav .nav-items li {
-  display: inline-flex;
-  padding: 10px 20px 0 20px;
-  font-size: 1.4em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Slabo 27px", Sans-serif;
-}
-.main-nav .nav-items i {
-  color: white;
-  text-align: left;
-  margin-left: auto;
+.main-nav .nav-items .item {
+  font-size: 4;
 }
 
 .container {
