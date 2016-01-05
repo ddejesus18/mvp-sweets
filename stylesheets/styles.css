@@ -561,15 +561,19 @@ body {
   line-height: 1em;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .main-nav {
-  position: absolute;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 .main-nav .fa {
   float: right;
-  margin-right: 4px;
-  padding: 2px;
+  margin-right: 20px;
 }
 .main-nav #close-nav {
   display: none;
@@ -578,7 +582,6 @@ body {
   list-style-type: none;
   text-align: center;
   background-color: rgba(128, 128, 128, 0.3);
-  position: relative;
   display: none;
   cursor: pointer;
 }
@@ -589,6 +592,14 @@ body {
 .container {
   width: 100%;
   height: 700px;
-  background: url('../images/crown.png?1451753388') center;
-  background-size: cover;
+  z-index: 1;
+  padding: 0;
+  background: url('../images/Background-image.png?1451962599') no-repeat center;
+  background-size: 100%;
+  background-position: top;
+  /* current issue:
+  next to do a media query for the image, consider making it an html element instead
+  of scss. Or try to find scss alternative for background image. the width is not correct
+  figure out if it's due to the nave.
+  */
 }
