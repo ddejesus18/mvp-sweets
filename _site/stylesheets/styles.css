@@ -561,36 +561,57 @@ body {
   line-height: 1em;
 }
 
-.main-nav {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.main-nav .fa {
-  float: right;
-  margin-right: 20px;
-  padding: 2px;
-}
-.main-nav #close-nav {
-  display: none;
-}
-.main-nav .nav-items {
-  list-style-type: none;
-  text-align: center;
-  background-color: rgba(128, 128, 128, 0.3);
-  position: relative;
-  display: none;
-  cursor: pointer;
-}
-.main-nav .nav-items .item {
-  font-size: 4;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  width: 100%;
+header {
   height: 700px;
-  background: url('../images/Background-image.png?1451962599') center no-repeat;
-  background-size: 100%;
-  background-position: top;
-  box-sizing: border-box;
+  width: 100%;
+  margin-top: -20px;
+  background: url('../images/Background-image.png?1452099747') no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+/* current issue:
+next to do a media query for the image, consider making it an html element instead
+of scss. Or try to find scss alternative for background image. the width is not correct
+figure out if it's due to the nave.
+*/
+.main-nav {
+  margin: 0;
+  width: 100%;
+}
+.main-nav .nav-items {
+  background-color: #f49ac1;
+  color: white;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  margin: 0px;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18.72px;
+}
+.main-nav .nav-items li {
+  display: inline-block;
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+.main-nav .nav-items li:hover {
+  background: #f9a4c9;
+}
+.main-nav .nav-items li a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .main-nav li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+  }
 }

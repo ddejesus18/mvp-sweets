@@ -5,36 +5,62 @@
 @import "partials/base";
 @import "compass/utilities/sprites";
 
-.main-nav {
-  position:absolute;
-  height: 100%;
-  width: 100%;
-  .fa {
-    float: right;
-    margin-right: 20px;
-    padding: 2px;
-  }
-    #close-nav {
-      display: none;
+body {
+  margin: 0;
+  padding: 0;
 }
-        .nav-items {
-          list-style-type: none;
-          text-align: center;
-          background-color: rgba(128, 128, 128, .3);
-          position: relative;
-          display: none;
-          cursor: pointer;
-            .item {
-              font-size:$nav-items-font-size;
-        }
-      }
-    }
-.container {
-  width: 100%;
+header {
   height: 700px;
-  background:image-url("Background-image.png")center no-repeat;
-  background-size: 100%;
-  background-position: top;
-  box-sizing: border-box;
-  //background: $nav-back;
+  width: 100%;
+  margin-top: -20px;
+  background:image-url("Background-image.png")no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  //@media screen and (max-width:900px) {
+    //  background-size: contain;
+  //  background-position: top;
+  //  }
+  }
+ /* current issue:
+ next to do a media query for the image, consider making it an html element instead
+ of scss. Or try to find scss alternative for background image. the width is not correct
+ figure out if it's due to the nave.
+ */
+.main-nav {
+  margin: 0;
+  width: 100%;
+  .nav-items {
+    background-color: $pop-pink;
+    color: white;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 0px;
+    font-family: $body-font;
+    font-size: $h3-font-size;
+  li {
+    display: inline-block;
+    padding:20px 30px;
+
+    &:hover {
+        background: $nav-hover;
+    }
+    text-transform: uppercase;
+    a {
+     text-decoration: none;
+     color: white;
+    }
+  }
+  }
+
+  @media screen and (max-width: 800px) {
+    li {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 15px;
+      margin: 0;
+      text-align: left;
+
+    }
+  }
 }
