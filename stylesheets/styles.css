@@ -564,6 +564,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", Sans-serif;
 }
 
 header {
@@ -583,35 +584,60 @@ figure out if it's due to the nave.
 .main-nav {
   margin: 0;
   width: 100%;
+  font-family: "Roboto", Sans-serif;
 }
-.main-nav .nav-items {
+.main-nav ul {
   background-color: #f49ac1;
   color: white;
   padding: 0;
   overflow: hidden;
   text-align: center;
   margin: 0px;
-  font-family: "Roboto", Sans-serif;
-  font-size: 18.72px;
+  font-size: 24px;
+  transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -webkit-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
 }
-.main-nav .nav-items li {
+.main-nav ul li {
   display: inline-block;
   padding: 20px 30px;
-  text-transform: uppercase;
 }
-.main-nav .nav-items li:hover {
+.main-nav ul li:hover {
   background: #f9a4c9;
 }
-.main-nav .nav-items li a {
+.main-nav ul li a {
   text-decoration: none;
   color: white;
 }
+.main-nav .handle {
+  width: 100%;
+  background: #1cbbb4;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+.main-nav .handle h3 {
+  font-size: 24px;
+}
 @media screen and (max-width: 800px) {
+  .main-nav ul {
+    max-height: 0;
+  }
+  .main-nav ul .showing {
+    max-height: 15em;
+  }
   .main-nav li {
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
-    margin: 0;
     text-align: left;
+  }
+  .main-nav .handle {
+    display: block;
   }
 }

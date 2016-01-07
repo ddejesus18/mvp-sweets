@@ -4,10 +4,12 @@
 @import "partials/mixin";
 @import "partials/base";
 @import "compass/utilities/sprites";
+@import "compass/css3";
 
 body {
   margin: 0;
   padding: 0;
+  font-family: $body-font;
 }
 header {
   height: 700px;
@@ -29,38 +31,62 @@ header {
 .main-nav {
   margin: 0;
   width: 100%;
-  .nav-items {
+  font-family: $body-font;
+  ul {
     background-color: $pop-pink;
     color: white;
     padding: 0;
     overflow: hidden;
     text-align: center;
     margin: 0px;
-    font-family: $body-font;
-    font-size: $h3-font-size;
+    font-size: 24px;
+    transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
   li {
     display: inline-block;
     padding:20px 30px;
-
     &:hover {
-        background: $nav-hover;
+    background: $nav-hover;
     }
-    text-transform: uppercase;
     a {
      text-decoration: none;
      color: white;
     }
   }
   }
+ .handle {
+   width: 100%;
+   background: $green;
+   box-sizing: border-box;
+   text-align: left;
+   padding: 10px 30px;
+   cursor: pointer;
+   color: white;
+   display: none;
+   h3 {
+     font-size: $h2-font-size;
 
+   }
+ }
   @media screen and (max-width: 800px) {
+    ul {
+      // this hides it for mobile viewport
+      max-height: 0;
+    .showing {
+      max-height: 15em;
+    }
+    }
     li {
       box-sizing: border-box;
       width: 100%;
       padding: 15px;
-      margin: 0;
       text-align: left;
-
     }
+  .handle {
+    display: block;
   }
+}
 }

@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MVP Sweets</title>
   <link rel="stylesheet" href="stylesheets/styles.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 </head>
@@ -16,18 +16,24 @@
   <header class="jumbo-background">
   </header>
   <nav class="main-nav">
-  <!--  <i class="fa fa-bars fa-4x" id="open-nav"></i>
-    <p>Menu</p> -->
-    <ul class="nav-items">
+    <ul class="showing">
     <li class="item"><a href="#">About</a></li>
     <li class="item"><a href="#">Cake</a></li>
     <li class="item"><a href="#">Decoration</a></li>
     <li class="item"><a href="#">Contact</a></li>
     </ul>
     <div class="handle">
-      <i class="fa fa-bars fa-4x">Menu</i>
+      <h3>Menu</h3>
+    <i class="fa fa-bars fa-3x"></i> 
     </div>
   </nav>
+  <script>
+  $('.handle').on('click', function(){
+    $('nav ul').toggleClass('showing');
+  });
+  </script>
+</body>
+</html>
 <!--<div class="about-container">
   h2 class="heading">About</h2>
    <hr />
