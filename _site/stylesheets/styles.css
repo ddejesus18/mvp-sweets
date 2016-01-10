@@ -567,22 +567,13 @@ body {
   font-family: "Roboto", Sans-serif;
 }
 
-header {
-  height: 700px;
+.jumbo-background {
+  position: relative;
+  height: 600px;
   width: 100%;
-  margin-top: -20px;
   background: url('../images/Background-image.png?1452099747') no-repeat center;
   background-size: cover;
   margin: 0 auto;
-}
-@media screen and (max-width: 800px) {
-  header {
-    background-size: contain;
-    background-position: top;
-    width: 100%;
-    height: 550px;
-    padding: 0;
-  }
 }
 
 /* current issue:
@@ -593,6 +584,7 @@ figure out if it's due to the nave.
 .main-nav {
   margin: 0;
   width: 100%;
+  position: absolute;
   font-family: "Roboto", Sans-serif;
 }
 .main-nav ul {
@@ -609,49 +601,58 @@ figure out if it's due to the nave.
   -moz-transition: max-height 0.4s;
   -o-transition: max-height 0.4s;
 }
-@media screen and (max-width: 800px) {
-  .main-nav ul {
+@media screen and (max-width: 757px) and (min-width: 675px) {
+  .main-nav {
     max-height: 0;
-    margin-top: -170px;
-  }
-}
-@media screen and (max-width: 675px) {
-  .main-nav ul {
-    max-height: 0;
-    margin-top: -180px;
   }
 }
 @media screen and (max-width: 601px) {
-  .main-nav ul {
+  .main-nav {
     max-height: 0;
     margin-top: -280px;
   }
 }
-@media screen and (max-width: 800px) {
-  .main-nav .showing {
+@media screen and (min-width: 518px) and (max-width: 675px) {
+  .main-nav {
+    max-height: 0;
+    margin-top: -210px;
+  }
+}
+@media screen and (min-width: 620px) and (max-width: 674px) {
+  .main-nav {
+    max-height: 0;
+    margin-top: -160px;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .showing {
     max-height: 13em;
   }
 }
-.main-nav a {
+
+a {
   text-decoration: none;
   color: white;
 }
-.main-nav .item {
+
+li {
   display: inline-block;
   padding: 20px 30px;
 }
-.main-nav .item:hover {
+li:hover {
   background: #f9a4c9;
 }
-@media screen and (max-width: 800px) {
-  .main-nav .item {
+@media screen and (max-width: 757px) {
+  li {
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
     text-align: left;
   }
 }
-.main-nav .handle {
+
+.handle {
   width: 100%;
   background: #1cbbb4;
   box-sizing: border-box;
@@ -661,17 +662,26 @@ figure out if it's due to the nave.
   color: white;
   display: none;
 }
-@media screen and (max-width: 800px) {
-  .main-nav .handle {
+@media screen and (max-width: 757px) {
+  .handle {
     display: block;
   }
 }
-.main-nav .handle h3 {
+.handle h3 {
   font-size: 24px;
   display: inline-block;
 }
-.main-nav .handle i {
+.handle i {
   display: inline-block;
   float: right;
   padding-top: 8px;
+}
+
+.about-container {
+  width: 50%;
+  border: 1px solid black;
+}
+.about-container .heading {
+  font-size: 32px;
+  color: black;
 }

@@ -12,21 +12,13 @@ body {
   padding: 0;
   font-family: $body-font;
 }
-header {
-  height: 700px;
+.jumbo-background {
+  position: relative;
+  height: 600px;
   width: 100%;
-  margin-top: -20px;
   background:image-url("Background-image.png")no-repeat center;
   background-size: cover;
   margin: 0 auto;
-  @media screen and (max-width: $break-medium) {
-      background-size: contain;
-   background-position: top;
-   width: 100%;
-   height: 550px;
-   padding: 0;
-
-   }
 }
  /* current issue:
  next to do a media query for the image, consider making it an html element instead
@@ -36,6 +28,8 @@ header {
 .main-nav {
   margin: 0;
   width: 100%;
+  position: absolute;
+
   font-family: $body-font;
   ul {
     background-color: $pop-pink;
@@ -51,18 +45,24 @@ header {
     -webkit-transition: max-height 0.4s;
     -moz-transition: max-height 0.4s;
     -o-transition: max-height 0.4s;
-    @media screen and (max-width: $break-medium) {
+  }
+  @media screen and (max-width: $break-medium) and (min-width: $break-small) {
       // this hides it for mobile viewport
       max-height: 0;
-      margin-top: -170px;
+
     }
-    @media screen and (max-width: $break-small){
-      max-height: 0;
-      margin-top: -180px;
-    }
+
     @media screen and (max-width:$break-xsmall) {
       max-height: 0;
       margin-top: -280px;
+    }
+    @media screen and (min-width:$break-nav) and (max-width: $break-small){
+      max-height: 0;
+      margin-top: -210px;
+    }
+    @media screen and (min-width: 620px) and (max-width: 674px) {
+     max-height: 0;
+     margin-top: -160px;
     }
   }
     .showing {
@@ -74,7 +74,7 @@ header {
      text-decoration: none;
      color: white;
    }
-  .item {
+  li {
     display: inline-block;
     padding:20px 30px;
     &:hover {
@@ -109,4 +109,12 @@ header {
      padding-top: 8px;
  }
  }
- }
+
+ .about-container {
+   width: 50%;
+   border: 1px solid black;
+  .heading {
+    font-size: $h1-font-size;
+    color: black;
+  }
+}

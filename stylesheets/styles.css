@@ -567,22 +567,13 @@ body {
   font-family: "Roboto", Sans-serif;
 }
 
-header {
-  height: 700px;
+.jumbo-background {
+  position: relative;
+  height: 600px;
   width: 100%;
-  margin-top: -20px;
   background: url('../images/Background-image.png?1452099747') no-repeat center;
   background-size: cover;
   margin: 0 auto;
-}
-@media screen and (max-width: 757px) {
-  header {
-    background-size: contain;
-    background-position: top;
-    width: 100%;
-    height: 550px;
-    padding-top: 10%;
-  }
 }
 
 /* current issue:
@@ -593,6 +584,7 @@ figure out if it's due to the nave.
 .main-nav {
   margin: 0;
   width: 100%;
+  position: absolute;
   font-family: "Roboto", Sans-serif;
 }
 .main-nav ul {
@@ -609,48 +601,29 @@ figure out if it's due to the nave.
   -moz-transition: max-height 0.4s;
   -o-transition: max-height 0.4s;
 }
-@media screen and (max-width: 757px) and (min-width: 675px) {
+@media screen and (max-width: 757px) {
   .main-nav ul {
-    max-height: 0;
-    margin-top: -120px;
-  }
-}
-@media screen and (max-width: 601px) {
-  .main-nav ul {
-    max-height: 0;
-    margin-top: -280px;
-  }
-}
-@media screen and (min-width: 518px) and (max-width: 675px) {
-  .main-nav ul {
-    max-height: 0;
-    margin-top: -210px;
-  }
-}
-@media screen and (min-width: 620px) and (max-width: 674px) {
-  .main-nav ul {
-    max-height: 0;
-    margin-top: -160px;
+    max-height: 13em;
   }
 }
 @media screen and (max-width: 757px) {
   .main-nav .showing {
-    max-height: 13em;
+    max-height: 0;
   }
 }
 .main-nav a {
   text-decoration: none;
   color: white;
 }
-.main-nav .item {
+.main-nav li {
   display: inline-block;
   padding: 20px 30px;
 }
-.main-nav .item:hover {
+.main-nav li:hover {
   background: #f9a4c9;
 }
 @media screen and (max-width: 757px) {
-  .main-nav .item {
+  .main-nav li {
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
@@ -680,4 +653,13 @@ figure out if it's due to the nave.
   display: inline-block;
   float: right;
   padding-top: 8px;
+}
+
+.about-container {
+  width: 50%;
+  border: 1px solid black;
+}
+.about-container .heading {
+  font-size: 32px;
+  color: black;
 }
