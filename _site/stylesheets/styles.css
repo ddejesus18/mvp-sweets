@@ -569,7 +569,7 @@ body {
 
 .jumbo-background {
   position: relative;
-  height: 600px;
+  height: 650px;
   width: 100%;
   background: url('../images/Background-image.png?1452099747') no-repeat center fixed;
   background-size: cover;
@@ -588,17 +588,17 @@ figure out if it's due to the nave.
 */
 .main-nav {
   margin: 0;
+  padding: 0;
   width: 100%;
-  position: relative;
   font-family: "Roboto", Sans-serif;
 }
 .main-nav ul {
-  background-color: rgba(0, 238, 238, 0.4);
+  background-color: #1cbbb4;
   color: white;
   padding: 0;
   overflow: hidden;
   text-align: center;
-  margin: 0px;
+  margin: 0;
   font-size: 24px;
   transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
@@ -620,11 +620,12 @@ figure out if it's due to the nave.
 .main-nav li {
   display: inline-block;
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 35px;
   text-align: left;
+  font-size: 18.72px;
 }
 .main-nav li:hover {
-  background: rgba(0, 238, 238, 0.7);
+  background: rgba(191, 191, 191, 0.5);
 }
 @media screen and (max-width: 757px) {
   .main-nav li {
@@ -636,10 +637,11 @@ figure out if it's due to the nave.
 }
 .main-nav .handle {
   width: 100%;
-  background: rgba(0, 238, 238, 0.6);
+  background: #1cbbb4;
   box-sizing: border-box;
   text-align: left;
-  padding: 10px 30px;
+  padding: 3px 10px;
+  margin-top: -7px;
   cursor: pointer;
   color: white;
   display: block;
@@ -651,11 +653,33 @@ figure out if it's due to the nave.
 .main-nav i {
   display: inline-block;
   float: right;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 
-.wrapper {
-  position: absolute;
-  z-index: 30;
-  background: white;
+.container section {
+  width: 30%;
+  display: inline-block;
+  margin: 0 1.5%;
+  padding: 3px 8px;
+  color: #607D8B;
+  background-color: white;
+  border: 8px double #f49ac1;
+  text-align: left;
+}
+.container section img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 2px 2px 3px #f49ac1;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transition: all .2s ease-in-out;
+}
+.container section img:hover {
+  transform: scale(1.1);
+}
+.container section h2 {
+  text-align: center;
 }
