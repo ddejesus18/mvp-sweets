@@ -8,6 +8,7 @@
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -37,25 +38,39 @@
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         </p>
         <!-- the reason for this space is so that the whitespace can be removed between sections -->
-    </section><section class="cake">
-      <img src="images/cake.png" alt="">
+    </section>
+    <img src="images/background-gold.png" alt="" id="side-image">
+</div>
+<div class="clearfix">
+    <aside class="cake">
       <h2>Cake</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         </p>
-    </section><section class="decoration">
-      <img src="images/decorations.png" alt="">
+        <br>
+        <button class="info">More Info</button>
       <h2>Decoration</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
         </p>
-    </section>
-</div>
-
+        <br>
+        <button class="info">More Info</button>
+    </aside>
+  </div>
+<section class="portfolio">
+  <h2>Portfolio</h2>
+    <img src="images/full-deco.png" alt="" class="portfolio-image" id="image1">
+    <img src="images/decoration.png" alt="" class="portfolio-image" id="image2">
+    <img src="images/cake-pops.png" alt="" class="portfolio-image" id="image3">
+    <img src="images/elephants.png" alt=""class="portfolio-image" id="image4">
+<img src="images/decorations.png" alt=""class="portfolio-image" id="image5">
+  <img src="images/fancy-cupcake.png" alt=""class="portfolio-image" id="image6">
+  <img src="images/cake.png" alt=""class="portfolio-image" id="image7">
+  <img src="images/deco2.png" alt=""class="portfolio-image" id="image8">
   <script>
   $('.handle').on('click', function(){
     $('nav ul').toggleClass('showing');

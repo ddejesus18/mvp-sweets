@@ -577,7 +577,7 @@ body {
 }
 @media screen and (max-height: 757px) {
   .jumbo-background {
-    height: 300px;
+    height: 500px;
   }
 }
 
@@ -590,16 +590,14 @@ figure out if it's due to the nave.
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: "Roboto", Sans-serif;
+  font-family: "Economica", cursive;
 }
 .main-nav ul {
-  background-color: #1cbbb4;
-  color: white;
   padding: 0;
   overflow: hidden;
   text-align: center;
   margin: 0;
-  font-size: 24px;
+  font-size: 32px;
   transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
   -webkit-transition: max-height 0.4s;
@@ -612,7 +610,6 @@ figure out if it's due to the nave.
 }
 .main-nav a {
   text-decoration: none;
-  color: white;
 }
 .main-nav a:hover {
   color: white;
@@ -622,7 +619,7 @@ figure out if it's due to the nave.
   width: 100%;
   padding: 20px 35px;
   text-align: left;
-  font-size: 18.72px;
+  font-size: 24px;
 }
 .main-nav li:hover {
   background: rgba(191, 191, 191, 0.5);
@@ -637,52 +634,147 @@ figure out if it's due to the nave.
 }
 .main-nav .handle {
   width: 100%;
-  background: #1cbbb4;
+  background: transparent;
   box-sizing: border-box;
   text-align: left;
   padding: 3px 10px;
   margin-top: -7px;
   cursor: pointer;
-  color: white;
   display: block;
 }
 .main-nav h3 {
-  font-size: 24px;
+  font-size: 28px;
   display: inline-block;
 }
 .main-nav i {
   display: inline-block;
   float: right;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .container {
   margin-top: 50px;
+  margin-bottom: 60px;
+  width: 90%;
 }
 .container section {
-  width: 30%;
+  width: 250px;
+  margin: 0;
+  float: left;
   display: inline-block;
-  margin: 0 1.5%;
   padding: 3px 8px;
-  color: #607D8B;
   background-color: white;
-  border: 8px double #f49ac1;
-  text-align: left;
+  border: 15px double #f49ac1;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 3px #f49ac1;
+  position: relative;
+  z-index: 30;
 }
 .container section img {
-  height: 140px;
-  width: 140px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   border: 3px solid white;
-  box-shadow: 2px 2px 3px #f49ac1;
+  box-shadow: 2px 2px 3px #607D8B;
   position: relative;
-  display: block;
-  margin: 0 auto;
+  float: left;
+  margin-right: 20px;
   transition: all .2s ease-in-out;
 }
 .container section img:hover {
   transform: scale(1.1);
 }
 .container section h2 {
+  font-family: "Economica", cursive;
+  font-size: 30px;
+}
+.container #side-image {
+  float: right;
+  width: 70%;
+  height: auto;
+  margin: 0;
+  display: inline-block;
+  z-index: 20;
+}
+
+.clearfix {
+  width: 30%;
+  display: inline-block;
+}
+.clearfix aside {
+  float: right;
+  clear: left;
+  width: 90%;
+  display: inline-block;
+}
+.clearfix aside h2 {
+  font-family: "Economica", cursive;
+  font-size: 30px;
+}
+.clearfix aside .info {
+  display: block;
+  margin: 4px;
+  float: right;
+  background-color: #f49ac1;
+  color: white;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-family: "Economica", cursive;
+}
+
+.portfolio {
+  width: 60%;
+  height: 500px;
+  overflow: scroll;
+  display: inline-block;
+  float: left;
+  clear: right;
+}
+.portfolio h2 {
+  font-size: 55px;
+  font-family: "Economica", cursive;
   text-align: center;
+}
+.portfolio .portfolio-image {
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+.portfolio #image1 {
+  width: 100%;
+  height: auto;
+}
+.portfolio #image2 {
+  width: 50%;
+  height: 350px;
+  float: left;
+}
+.portfolio #image3 {
+  width: 50%;
+  height: 350px;
+  float: right;
+}
+.portfolio #image4 {
+  width: 40%;
+  height: 300px;
+  float: left;
+}
+.portfolio #image5 {
+  float: right;
+  width: 60%;
+  height: 300px;
+}
+.portfolio #image6 {
+  width: 51%;
+  height: auto;
+  float: left;
+}
+.portfolio #image7 {
+  width: 49%;
+  height: auto;
+  float: right;
+}
+.portfolio #image8 {
+  width: 100%;
 }
