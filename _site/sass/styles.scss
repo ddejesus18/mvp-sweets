@@ -34,10 +34,7 @@ position: relative;
   width: 100%;
   font-family: $heading-font;
   ul {
-    background: image-url("Gold-foil-Background-1.jpg");
-    color: white;
     padding: 0;
-
     //so content of list do not spill out
     overflow: hidden;
     text-align: center;
@@ -55,7 +52,6 @@ position: relative;
   }
     a {
      text-decoration: none;
-     color: white;
      &:hover{
        color:white;
      }
@@ -77,6 +73,7 @@ position: relative;
       text-align: left;
   }
 }
+}
  .handle {
    width: 100%;
    background: transparent;
@@ -85,9 +82,7 @@ position: relative;
    padding: 3px 10px;
    margin-top: -7px;
    cursor: pointer;
-
   display: block;
-     }
    h3 {
      font-size: 28px;
      display: inline-block;
@@ -102,20 +97,23 @@ position: relative;
 .container {
   margin-top: 50px;
   margin-bottom: 60px;
-width: 90%;
+  width: 90%;
   section {
     width: 250px;
-margin: 0;
+    margin: 0;
     float: left;
     display: inline-block;
     padding: 3px 8px;
-
     background-color: white;
     border: 15px double $pop-pink;
     box-sizing: border-box;
     box-shadow: 3px 3px 3px $pop-pink;
     position: relative;
     z-index: 30;
+    @media screen and(max-width: $break-small) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
     img {
   height: 150px;
   width: 150px;
@@ -128,14 +126,13 @@ margin: 0;
   transition: all .2s ease-in-out;
   &:hover {
 transform: scale(1.1);
-
 }
-  }
+}
     h2 {
       font-family: $heading-font;
       font-size: 30px;
+    }
   }
-}
 #side-image {
   float: right;
   width: 70%;
@@ -143,24 +140,42 @@ transform: scale(1.1);
   margin: 0;
   display: inline-block;
   z-index: 20;
+@media screen and(max-width: $break-medium) {
+  float: right;
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+}
+@media screen and(max-width: $break-small) {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 15px double $green;
+  box-shadow: 3px 3px 3px $green;
 }
 }
-
+}
 .clearfix {
   width: 30%;
   display: inline-block;
+  @media screen and (max-width: $break-medium) {
+    width: 90%;
+  }
 aside {
   float: right;
   clear: left;
   width: 90%;
   display: inline-block;
-  h2 {
+    h2 {
     font-family: $heading-font;
     font-size: $heading-font-size;
   }
 .info {
     display: block;
-    margin: 4px;
+    margin: 0 auto;
     float: right;
     background-color: $pop-pink;
     color: white;
@@ -170,8 +185,13 @@ aside {
     padding: 4px 6px;
     font-family: $heading-font;
   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 }
+
 .portfolio {
   width: 60%;
   height: 500px;
@@ -179,16 +199,28 @@ aside {
   display: inline-block;
   float: left;
   clear:right;
-
+  @media screen and(max-width: $break-medium) {
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: block;
+  }
   h2 {
     font-size: 55px;
     font-family: $heading-font;
     text-align: center;
   }
-  .portfolio-image{
+  .portfolio-image {
     box-sizing: border-box;
     border: 2px solid white;
+  &:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
   }
+}
 #image1 {
   width: 100%;
   height:auto;
@@ -226,5 +258,46 @@ aside {
 }
 #image8 {
   width: 100%;
+    height: auto;
 }
 }
+.contact {
+  clear: both;
+  width: 60%;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+  }
+section {
+  width: 90%;
+  text-align: left;
+  float: left;
+  box-sizing: border-box;
+  padding: 3px 8px;
+ h2 {
+   font-family: $heading-font;
+   font-size: 45px;
+ p {
+   width: 40%;
+ }
+ }
+ }
+ .info {
+   display:inline-block;
+   margin: 0 auto;
+   font-size: 25px;
+   border: 2px solid white;
+   border-radius: 4px;
+   padding: 4px 8px;
+   font-family: $heading-font;
+ a {
+   text-decoration: none;
+   color: white;
+ }
+ }
+ }
+ footer{
+   font-family: $heading-font;
+   height: 20px;
+   width:100%;
+   position: absolute;
+ }

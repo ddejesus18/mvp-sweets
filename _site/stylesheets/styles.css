@@ -575,7 +575,7 @@ body {
   background-size: cover;
   z-index: 20;
 }
-@media screen and (max-height: 757px) {
+@media screen and (max-height: 991px) {
   .jumbo-background {
     height: 500px;
   }
@@ -593,8 +593,6 @@ figure out if it's due to the nave.
   font-family: "Economica", cursive;
 }
 .main-nav ul {
-  background: url('../images/Gold-foil-Background-1.jpg?1452789987');
-  color: white;
   padding: 0;
   overflow: hidden;
   text-align: center;
@@ -612,7 +610,6 @@ figure out if it's due to the nave.
 }
 .main-nav a {
   text-decoration: none;
-  color: white;
 }
 .main-nav a:hover {
   color: white;
@@ -627,7 +624,7 @@ figure out if it's due to the nave.
 .main-nav li:hover {
   background: rgba(191, 191, 191, 0.5);
 }
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 991px) {
   .main-nav li {
     box-sizing: border-box;
     width: 100%;
@@ -635,7 +632,8 @@ figure out if it's due to the nave.
     text-align: left;
   }
 }
-.main-nav .handle {
+
+.handle {
   width: 100%;
   background: transparent;
   box-sizing: border-box;
@@ -645,11 +643,11 @@ figure out if it's due to the nave.
   cursor: pointer;
   display: block;
 }
-.main-nav h3 {
+.handle h3 {
   font-size: 28px;
   display: inline-block;
 }
-.main-nav i {
+.handle i {
   display: inline-block;
   float: right;
   margin-top: 10px;
@@ -672,6 +670,12 @@ figure out if it's due to the nave.
   box-shadow: 3px 3px 3px #f49ac1;
   position: relative;
   z-index: 30;
+}
+@media screen and (max-width: 760px) {
+  .container section {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 .container section img {
   height: 150px;
@@ -699,10 +703,35 @@ figure out if it's due to the nave.
   display: inline-block;
   z-index: 20;
 }
+@media screen and (max-width: 991px) {
+  .container #side-image {
+    float: right;
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container #side-image {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 3px;
+    border: 15px double #1cbbb4;
+    box-shadow: 3px 3px 3px #1cbbb4;
+  }
+}
 
 .clearfix {
   width: 30%;
   display: inline-block;
+}
+@media screen and (max-width: 991px) {
+  .clearfix {
+    width: 90%;
+  }
 }
 .clearfix aside {
   float: right;
@@ -716,7 +745,7 @@ figure out if it's due to the nave.
 }
 .clearfix aside .info {
   display: block;
-  margin: 4px;
+  margin: 0 auto;
   float: right;
   background-color: #f49ac1;
   color: white;
@@ -725,6 +754,10 @@ figure out if it's due to the nave.
   border-radius: 4px;
   padding: 4px 6px;
   font-family: "Economica", cursive;
+}
+.clearfix aside a {
+  text-decoration: none;
+  color: white;
 }
 
 .portfolio {
@@ -735,6 +768,13 @@ figure out if it's due to the nave.
   float: left;
   clear: right;
 }
+@media screen and (max-width: 991px) {
+  .portfolio {
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: block;
+  }
+}
 .portfolio h2 {
   font-size: 55px;
   font-family: "Economica", cursive;
@@ -743,6 +783,14 @@ figure out if it's due to the nave.
 .portfolio .portfolio-image {
   box-sizing: border-box;
   border: 2px solid white;
+}
+.portfolio .portfolio-image:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .portfolio #image1 {
   width: 100%;
@@ -780,4 +828,49 @@ figure out if it's due to the nave.
 }
 .portfolio #image8 {
   width: 100%;
+  height: auto;
+}
+
+.contact {
+  clear: both;
+  width: 60%;
+}
+@media screen and (max-width: 991px) {
+  .contact {
+    width: 100%;
+  }
+}
+.contact section {
+  width: 90%;
+  text-align: left;
+  float: left;
+  box-sizing: border-box;
+  padding: 3px 8px;
+}
+.contact section h2 {
+  font-family: "Economica", cursive;
+  font-size: 45px;
+}
+.contact section h2 p {
+  width: 40%;
+}
+.contact .info {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 25px;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: "Economica", cursive;
+}
+.contact .info a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  font-family: "Economica", cursive;
+  height: 20px;
+  width: 100%;
+  position: absolute;
 }
