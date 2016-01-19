@@ -173,7 +173,10 @@ aside {
     font-family: $heading-font;
     font-size: $heading-font-size;
   }
-.info {
+  ul {
+    list-style-type: none;
+  }
+  .info {
     display: block;
     margin: 0 auto;
     float: right;
@@ -194,7 +197,7 @@ aside {
 
 .portfolio {
   width: 60%;
-  height: 500px;
+  height: 800px;
   overflow: scroll;
   display: inline-block;
   float: left;
@@ -263,6 +266,7 @@ aside {
 }
 .contact {
   clear: both;
+  position: relative;
   width: 60%;
   @media screen and (max-width: $break-medium) {
     width: 100%;

@@ -743,6 +743,9 @@ figure out if it's due to the nave.
   font-family: "Economica", cursive;
   font-size: 30px;
 }
+.clearfix aside ul {
+  list-style-type: none;
+}
 .clearfix aside .info {
   display: block;
   margin: 0 auto;
@@ -762,7 +765,7 @@ figure out if it's due to the nave.
 
 .portfolio {
   width: 60%;
-  height: 500px;
+  height: 800px;
   overflow: scroll;
   display: inline-block;
   float: left;
@@ -833,6 +836,7 @@ figure out if it's due to the nave.
 
 .contact {
   clear: both;
+  position: relative;
   width: 60%;
 }
 @media screen and (max-width: 991px) {
@@ -841,7 +845,8 @@ figure out if it's due to the nave.
   }
 }
 .contact section {
-  width: 90%;
+  display: inline-block;
+  width: 50%;
   text-align: left;
   float: left;
   box-sizing: border-box;
@@ -851,19 +856,19 @@ figure out if it's due to the nave.
   font-family: "Economica", cursive;
   font-size: 45px;
 }
-.contact section h2 p {
-  width: 40%;
-}
-.contact .info {
+
+.info {
+  float: right;
   display: inline-block;
-  margin: 0 auto;
+  background-color: #f49ac1;
   font-size: 25px;
   border: 2px solid white;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 6px 10px;
+  margin: 70px 30px 0 0;
   font-family: "Economica", cursive;
 }
-.contact .info a {
+.info a {
   text-decoration: none;
   color: white;
 }
