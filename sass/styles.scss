@@ -110,9 +110,10 @@ position: relative;
     box-shadow: 3px 3px 3px $pop-pink;
     position: relative;
     z-index: 30;
-    @media screen and(max-width: $break-small) {
+    @media screen and(max-width: $break-medium) {
       width: 100%;
-      margin-bottom: 15px;
+      margin: 0 auto 15px auto;
+
     }
     img {
   height: 150px;
@@ -141,13 +142,6 @@ transform: scale(1.1);
   display: inline-block;
   z-index: 20;
 @media screen and(max-width: $break-medium) {
-  float: right;
-  width: 60%;
-  height: auto;
-  display: inline-block;
-  margin: 0;
-}
-@media screen and(max-width: $break-small) {
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -159,16 +153,26 @@ transform: scale(1.1);
 }
 }
 .clearfix {
-  width: 30%;
+  width: 35%;
   display: inline-block;
   @media screen and (max-width: $break-medium) {
     width: 90%;
+    box-sizing: border-box;
+    margin-top: -20px;
   }
 aside {
+  border: 5px;
+  box-shadow: 2px 1px 1px $light-grey;
+  -webkit-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  -o-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
   float: right;
   clear: left;
   width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
   display: inline-block;
+  margin-bottom: 20px;
     h2 {
     font-family: $heading-font;
     font-size: $heading-font-size;
@@ -195,26 +199,41 @@ aside {
 }
 }
 
-.portfolio {
+.gallery {
   width: 60%;
   height: 800px;
+  margin-left: 4%;
   overflow: scroll;
   display: inline-block;
   float: left;
   clear:right;
+  position: relative;
   @media screen and(max-width: $break-medium) {
-    width: 100%;
-    margin: 0 0 10px 0;
-    display: block;
+    width: 82%;
+    margin-left: 9%;
+    text-align: center;
+    box-sizing: border-box;
+
   }
   h2 {
-    font-size: 55px;
+    font-size: 60px;
     font-family: $heading-font;
-    text-align: center;
+    text-align:center;
+    background: image-url("Gold-Foil-Background-1.jpg") no-repeat center;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    float: left;
+    color: white;
   }
   .portfolio-image {
     box-sizing: border-box;
+    margin: 0 auto;
     border: 2px solid white;
+    @media screen and (max-width: $break-medium) {
+      width: 90%;
+      box-sizing: border-box;
+    }
   &:hover {
     transform: scale(1.1);
     -webkit-transition: all 1s ease;
@@ -232,36 +251,102 @@ aside {
   width:50%;
   height:350px;
   float: left;
+    @media screen and(max-width: $break-small)  {
+      width: 100%;
+}
 }
 #image3 {
   width:50%;
   height:350px;
   float: right;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
 }
 #image4 {
   width: 40%;
   height:300px;
-  float:left
+  float:left;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
 }
 #image5 {
   float: right;
   width: 60%;
   height: 300px;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
 }
 #image6 {
   width: 51%;
   height: auto;
   float: left;
-
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
 }
 #image7 {
   width: 49%;
   height: auto;
   float: right;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
 }
 #image8 {
   width: 100%;
     height: auto;
+    @media screen and(max-width: $break-small)  {
+      width: 100%;
+}
+}
+#image9 {
+  width: 45.4%;
+  float: left;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+
+}
+#image10 {
+  width: 54.6%;
+  float: right;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+}
+#image11 {
+  width: 44%;
+  float: right;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+}
+#image12 {
+  width: 56%;
+  float: left;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+}
+#image13 {
+  width:  42.5%;
+  float: right;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+}
+#image14 {
+  width: 57.5%;
+  float: left;
+  @media screen and(max-width: $break-small)  {
+    width: 100%;
+}
+}
+#image15 {
+  width: 100%;
 }
 }
 .contact {
