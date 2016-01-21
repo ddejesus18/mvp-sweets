@@ -195,7 +195,7 @@ aside {
 }
 }
 
-.portfolio {
+.gallery {
   width: 60%;
   height: 800px;
   overflow: scroll;
@@ -215,6 +215,14 @@ aside {
   .portfolio-image {
     box-sizing: border-box;
     border: 2px solid white;
+    @media screen and(max-width: $break-small)  {
+    img {
+      display: block;
+        clear: both;
+        width: 100%;
+        border: none;
+    }
+    }
   &:hover {
     transform: scale(1.1);
     -webkit-transition: all 1s ease;
@@ -262,6 +270,34 @@ aside {
 #image8 {
   width: 100%;
     height: auto;
+}
+#image9 {
+  width: 45.4%;
+  float: left;
+
+}
+#image10 {
+  width: 54.6%;
+  float: right;
+}
+#image11 {
+  width: 44%;
+  float: right;
+}
+#image12 {
+  width: 56%;
+  float: left;
+}
+#image13 {
+  width:  42%;
+  float: right;
+}
+#image14 {
+  width: 58%;
+  float: left;
+}
+#image15 {
+  width: 100%;
 }
 }
 .contact {

@@ -671,10 +671,10 @@ figure out if it's due to the nave.
   position: relative;
   z-index: 30;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 991px) {
   .container section {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
   }
 }
 .container section img {
@@ -705,15 +705,6 @@ figure out if it's due to the nave.
 }
 @media screen and (max-width: 991px) {
   .container #side-image {
-    float: right;
-    width: 60%;
-    height: auto;
-    display: inline-block;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 760px) {
-  .container #side-image {
     width: 100%;
     display: inline-block;
     text-align: center;
@@ -725,19 +716,29 @@ figure out if it's due to the nave.
 }
 
 .clearfix {
-  width: 30%;
+  width: 35%;
   display: inline-block;
 }
 @media screen and (max-width: 991px) {
   .clearfix {
     width: 90%;
+    box-sizing: border-box;
+    margin-top: -20px;
   }
 }
 .clearfix aside {
+  border: 5px;
+  box-shadow: 2px 1px 1px #607D8B;
+  -webkit-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  -o-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
   float: right;
   clear: left;
   width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
   display: inline-block;
+  margin-bottom: 20px;
 }
 .clearfix aside h2 {
   font-family: "Economica", cursive;
@@ -763,31 +764,47 @@ figure out if it's due to the nave.
   color: white;
 }
 
-.portfolio {
+.gallery {
   width: 60%;
   height: 800px;
+  margin-left: 4%;
   overflow: scroll;
   display: inline-block;
   float: left;
   clear: right;
+  position: relative;
 }
 @media screen and (max-width: 991px) {
-  .portfolio {
-    width: 100%;
-    margin: 0 0 10px 0;
-    display: block;
+  .gallery {
+    width: 82%;
+    margin-left: 9%;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
-.portfolio h2 {
-  font-size: 55px;
+.gallery h2 {
+  font-size: 60px;
   font-family: "Economica", cursive;
   text-align: center;
+  background: url('../images/Gold-Foil-Background-1.jpg?1452789987') no-repeat center;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  float: left;
+  color: white;
 }
-.portfolio .portfolio-image {
+.gallery .portfolio-image {
   box-sizing: border-box;
+  margin: 0 auto;
   border: 2px solid white;
 }
-.portfolio .portfolio-image:hover {
+@media screen and (max-width: 991px) {
+  .gallery .portfolio-image {
+    width: 90%;
+    box-sizing: border-box;
+  }
+}
+.gallery .portfolio-image:hover {
   transform: scale(1.1);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -795,43 +812,135 @@ figure out if it's due to the nave.
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
-.portfolio #image1 {
+.gallery #image1 {
   width: 100%;
   height: auto;
 }
-.portfolio #image2 {
+.gallery #image2 {
   width: 50%;
   height: 350px;
   float: left;
 }
-.portfolio #image3 {
+@media screen and (max-width: 600px) {
+  .gallery #image2 {
+    width: 100%;
+  }
+}
+.gallery #image3 {
   width: 50%;
   height: 350px;
   float: right;
 }
-.portfolio #image4 {
+@media screen and (max-width: 600px) {
+  .gallery #image3 {
+    width: 100%;
+  }
+}
+.gallery #image4 {
   width: 40%;
   height: 300px;
   float: left;
 }
-.portfolio #image5 {
+@media screen and (max-width: 600px) {
+  .gallery #image4 {
+    width: 100%;
+  }
+}
+.gallery #image5 {
   float: right;
   width: 60%;
   height: 300px;
 }
-.portfolio #image6 {
+@media screen and (max-width: 600px) {
+  .gallery #image5 {
+    width: 100%;
+  }
+}
+.gallery #image6 {
   width: 51%;
   height: auto;
   float: left;
 }
-.portfolio #image7 {
+@media screen and (max-width: 600px) {
+  .gallery #image6 {
+    width: 100%;
+  }
+}
+.gallery #image7 {
   width: 49%;
   height: auto;
   float: right;
 }
-.portfolio #image8 {
+@media screen and (max-width: 600px) {
+  .gallery #image7 {
+    width: 100%;
+  }
+}
+.gallery #image8 {
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image8 {
+    width: 100%;
+  }
+}
+.gallery #image9 {
+  width: 45.4%;
+  float: left;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image9 {
+    width: 100%;
+  }
+}
+.gallery #image10 {
+  width: 54.6%;
+  float: right;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image10 {
+    width: 100%;
+  }
+}
+.gallery #image11 {
+  width: 44%;
+  float: right;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image11 {
+    width: 100%;
+  }
+}
+.gallery #image12 {
+  width: 56%;
+  float: left;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image12 {
+    width: 100%;
+  }
+}
+.gallery #image13 {
+  width: 42.5%;
+  float: right;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image13 {
+    width: 100%;
+  }
+}
+.gallery #image14 {
+  width: 57.5%;
+  float: left;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image14 {
+    width: 100%;
+  }
+}
+.gallery #image15 {
+  width: 100%;
 }
 
 .contact {

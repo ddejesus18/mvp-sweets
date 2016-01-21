@@ -763,7 +763,7 @@ figure out if it's due to the nave.
   color: white;
 }
 
-.portfolio {
+.gallery {
   width: 60%;
   height: 800px;
   overflow: scroll;
@@ -772,22 +772,30 @@ figure out if it's due to the nave.
   clear: right;
 }
 @media screen and (max-width: 991px) {
-  .portfolio {
+  .gallery {
     width: 100%;
     margin: 0 0 10px 0;
     display: block;
   }
 }
-.portfolio h2 {
+.gallery h2 {
   font-size: 55px;
   font-family: "Economica", cursive;
   text-align: center;
 }
-.portfolio .portfolio-image {
+.gallery .portfolio-image {
   box-sizing: border-box;
   border: 2px solid white;
 }
-.portfolio .portfolio-image:hover {
+@media screen and (max-width: 760px) {
+  .gallery .portfolio-image img {
+    display: block;
+    clear: both;
+    width: 100%;
+    border: none;
+  }
+}
+.gallery .portfolio-image:hover {
   transform: scale(1.1);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -795,43 +803,70 @@ figure out if it's due to the nave.
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
-.portfolio #image1 {
+.gallery #image1 {
   width: 100%;
   height: auto;
 }
-.portfolio #image2 {
+.gallery #image2 {
   width: 50%;
   height: 350px;
   float: left;
 }
-.portfolio #image3 {
+.gallery #image3 {
   width: 50%;
   height: 350px;
   float: right;
 }
-.portfolio #image4 {
+.gallery #image4 {
   width: 40%;
   height: 300px;
   float: left;
 }
-.portfolio #image5 {
+.gallery #image5 {
   float: right;
   width: 60%;
   height: 300px;
 }
-.portfolio #image6 {
+.gallery #image6 {
   width: 51%;
   height: auto;
   float: left;
 }
-.portfolio #image7 {
+.gallery #image7 {
   width: 49%;
   height: auto;
   float: right;
 }
-.portfolio #image8 {
+.gallery #image8 {
   width: 100%;
   height: auto;
+}
+.gallery #image9 {
+  width: 45.4%;
+  float: left;
+}
+.gallery #image10 {
+  width: 54.6%;
+  float: right;
+}
+.gallery #image11 {
+  width: 44%;
+  float: right;
+}
+.gallery #image12 {
+  width: 56%;
+  float: left;
+}
+.gallery #image13 {
+  width: 42%;
+  float: right;
+}
+.gallery #image14 {
+  width: 58%;
+  float: left;
+}
+.gallery #image15 {
+  width: 100%;
 }
 
 .contact {
