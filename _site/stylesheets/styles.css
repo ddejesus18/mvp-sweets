@@ -564,13 +564,13 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Sans-serif;
 }
 
 .jumbo-background {
   position: relative;
-  height: 650px;
+  height: 760px;
   width: 100%;
+  margin-top: -20px;
   background: url('../images/Background-image.png?1452099747') no-repeat center fixed;
   background-size: cover;
   z-index: 20;
@@ -578,6 +578,18 @@ body {
 @media screen and (max-height: 991px) {
   .jumbo-background {
     height: 500px;
+    background: url('../images/Background-image.png?1452099747') no-repeat center fixed;
+    background-position: top;
+    margin-top: -10px;
+    background-size: cover;
+  }
+}
+@media screen and (max-height: 500px) {
+  .jumbo-background {
+    background: url('../images/Background-image.png?1452099747') no-repeat center fixed;
+    background-size: cover;
+    background-position: top;
+    height: 450px;
   }
 }
 
@@ -591,6 +603,7 @@ figure out if it's due to the nave.
   padding: 0;
   width: 100%;
   font-family: "Economica", cursive;
+  z-index: 30;
 }
 .main-nav ul {
   padding: 0;
@@ -610,6 +623,7 @@ figure out if it's due to the nave.
 }
 .main-nav a {
   text-decoration: none;
+  color: black;
 }
 .main-nav a:hover {
   color: white;
@@ -622,7 +636,7 @@ figure out if it's due to the nave.
   font-size: 24px;
 }
 .main-nav li:hover {
-  background: rgba(191, 191, 191, 0.5);
+  background: #1cbbb4;
 }
 @media screen and (max-width: 991px) {
   .main-nav li {
@@ -659,6 +673,8 @@ figure out if it's due to the nave.
   width: 90%;
 }
 .container section {
+  font-family: "Abel", Sans-serif;
+  font-size: 16px;
   width: 250px;
   margin: 0;
   float: left;
@@ -671,10 +687,10 @@ figure out if it's due to the nave.
   position: relative;
   z-index: 30;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 991px) {
   .container section {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
   }
 }
 .container section img {
@@ -685,7 +701,7 @@ figure out if it's due to the nave.
   box-shadow: 2px 2px 3px #607D8B;
   position: relative;
   float: left;
-  margin-right: 20px;
+  margin-right: 18px;
   transition: all .2s ease-in-out;
 }
 .container section img:hover {
@@ -693,7 +709,7 @@ figure out if it's due to the nave.
 }
 .container section h2 {
   font-family: "Economica", cursive;
-  font-size: 30px;
+  font-size: 34px;
 }
 .container #side-image {
   float: right;
@@ -704,15 +720,6 @@ figure out if it's due to the nave.
   z-index: 20;
 }
 @media screen and (max-width: 991px) {
-  .container #side-image {
-    float: right;
-    width: 60%;
-    height: auto;
-    display: inline-block;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 760px) {
   .container #side-image {
     width: 100%;
     display: inline-block;
@@ -725,31 +732,62 @@ figure out if it's due to the nave.
 }
 
 .clearfix {
-  width: 30%;
+  width: 35%;
   display: inline-block;
 }
 @media screen and (max-width: 991px) {
   .clearfix {
     width: 90%;
+    box-sizing: border-box;
+    margin-top: -20px;
   }
 }
 .clearfix aside {
+  border: 8px;
+  box-shadow: 2px 1px 1px #607D8B;
+  -webkit-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  -o-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
+  border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
   float: right;
   clear: left;
   width: 90%;
+  height: 900px;
+  padding: 10px;
+  box-sizing: border-box;
   display: inline-block;
+  margin-bottom: 20px;
+  font-family: "Abel", Sans-serif;
+}
+@media screen and (max-width: 991px) {
+  .clearfix aside {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .clearfix aside {
+    height: 900px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .clearfix aside {
+    height: 1000px;
+  }
 }
 .clearfix aside h2 {
   font-family: "Economica", cursive;
-  font-size: 30px;
+  font-size: 34px;
+}
+.clearfix aside p {
+  font-size: 16px;
 }
 .clearfix aside ul {
   list-style-type: none;
+  font-size: 16px;
 }
 .clearfix aside .info {
   display: block;
   margin: 0 auto;
-  float: right;
+  position: relative;
   background-color: #f49ac1;
   color: white;
   font-size: 20px;
@@ -765,34 +803,45 @@ figure out if it's due to the nave.
 
 .gallery {
   width: 60%;
-  height: 800px;
+  height: 900px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 4%;
   overflow: scroll;
   display: inline-block;
   float: left;
   clear: right;
+  position: relative;
 }
 @media screen and (max-width: 991px) {
   .gallery {
-    width: 100%;
-    margin: 0 0 10px 0;
-    display: block;
+    width: 82%;
+    margin-left: 9%;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
 .gallery h2 {
-  font-size: 55px;
+  font-size: 60px;
   font-family: "Economica", cursive;
   text-align: center;
+  margin-top: 0;
+  background: url('../images/Gold-Foil-Background-1.jpg?1452789987') no-repeat center;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  float: left;
+  color: white;
 }
 .gallery .portfolio-image {
   box-sizing: border-box;
+  margin: 0 auto;
   border: 2px solid white;
 }
-@media screen and (max-width: 760px) {
-  .gallery .portfolio-image img {
-    display: block;
-    clear: both;
-    width: 100%;
-    border: none;
+@media screen and (max-width: 991px) {
+  .gallery .portfolio-image {
+    width: 90%;
+    box-sizing: border-box;
   }
 }
 .gallery .portfolio-image:hover {
@@ -812,58 +861,123 @@ figure out if it's due to the nave.
   height: 350px;
   float: left;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image2 {
+    width: 100%;
+  }
+}
 .gallery #image3 {
   width: 50%;
   height: 350px;
   float: right;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image3 {
+    width: 100%;
+  }
 }
 .gallery #image4 {
   width: 40%;
   height: 300px;
   float: left;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image4 {
+    width: 100%;
+  }
+}
 .gallery #image5 {
   float: right;
   width: 60%;
   height: 300px;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image5 {
+    width: 100%;
+  }
 }
 .gallery #image6 {
   width: 51%;
   height: auto;
   float: left;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image6 {
+    width: 100%;
+  }
+}
 .gallery #image7 {
   width: 49%;
   height: auto;
   float: right;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image7 {
+    width: 100%;
+  }
+}
 .gallery #image8 {
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image8 {
+    width: 100%;
+  }
 }
 .gallery #image9 {
   width: 45.4%;
   float: left;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image9 {
+    width: 100%;
+  }
+}
 .gallery #image10 {
   width: 54.6%;
   float: right;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image10 {
+    width: 100%;
+  }
 }
 .gallery #image11 {
   width: 44%;
   float: right;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image11 {
+    width: 100%;
+  }
+}
 .gallery #image12 {
   width: 56%;
   float: left;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image12 {
+    width: 100%;
+  }
+}
 .gallery #image13 {
-  width: 42%;
+  width: 42.5%;
   float: right;
 }
+@media screen and (max-width: 600px) {
+  .gallery #image13 {
+    width: 100%;
+  }
+}
 .gallery #image14 {
-  width: 58%;
+  width: 57.5%;
   float: left;
+}
+@media screen and (max-width: 600px) {
+  .gallery #image14 {
+    width: 100%;
+  }
 }
 .gallery #image15 {
   width: 100%;
@@ -871,45 +985,64 @@ figure out if it's due to the nave.
 
 .contact {
   clear: both;
-  position: relative;
-  width: 60%;
+  background: url('../images/contact-jumbo.png?1454076605') no-repeat center;
+  background-size: cover;
+  width: 100%;
 }
 @media screen and (max-width: 991px) {
   .contact {
-    width: 100%;
+    width: 82%;
+    margin: 0 auto;
   }
 }
 .contact section {
   display: inline-block;
-  width: 50%;
-  text-align: left;
-  float: left;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
   box-sizing: border-box;
   padding: 3px 8px;
 }
 .contact section h2 {
+  text-align: left;
   font-family: "Economica", cursive;
-  font-size: 45px;
+  font-size: 48px;
 }
-
-.info {
-  float: right;
+.contact section p {
+  width: 50%;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Abel", Sans-serif;
+}
+@media screen and (max-width: 991px) {
+  .contact section p {
+    font-size: 16px;
+  }
+}
+.contact section .info {
   display: inline-block;
-  background-color: #f49ac1;
+  background-color: transparent;
   font-size: 25px;
   border: 2px solid white;
   border-radius: 4px;
   padding: 6px 10px;
-  margin: 70px 30px 0 0;
+  position: relative;
+  margin: 20px 0;
+  float: left;
   font-family: "Economica", cursive;
 }
-.info a {
+.contact section a {
   text-decoration: none;
   color: white;
+}
+.contact section a:hover {
+  color: #1cbbb4;
 }
 
 footer {
   font-family: "Economica", cursive;
+  margin: 0 auto;
+  text-align: center;
   height: 20px;
   width: 100%;
   position: absolute;

@@ -10,17 +10,27 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: $body-font;
 }
 .jumbo-background {
-position: relative;
-  height: 650px;
+  position: relative;
+  height: 760px;
   width: 100%;
+  margin-top: -20px;
   background:image-url("Background-image.png")no-repeat center fixed;
   background-size: cover;
   z-index: 20;
   @media screen and (max-height: $break-medium) {
     height: 500px;
+    background:image-url("Background-image.png")no-repeat center fixed;
+    background-position: top;
+    margin-top: -10px;
+    background-size: cover;
+  }
+  @media screen and (max-height: $break-xsmall) {
+    background:image-url("Background-image.png")no-repeat center fixed;
+    background-size: cover;
+    background-position: top;
+    height: 450px;
   }
 }
  /* current issue:
@@ -33,6 +43,7 @@ position: relative;
   padding: 0;
   width: 100%;
   font-family: $heading-font;
+  z-index: 30;
   ul {
     padding: 0;
     //so content of list do not spill out
@@ -45,13 +56,14 @@ position: relative;
     -webkit-transition: max-height 0.4s;
     -moz-transition: max-height 0.4s;
     -o-transition: max-height 0.4s;
-      max-height: 13em;
+    max-height: 13em;
   }
     .showing {
       max-height: 0;
   }
     a {
      text-decoration: none;
+     color: black;
      &:hover{
        color:white;
      }
@@ -62,17 +74,16 @@ position: relative;
     padding:20px 35px;
     text-align: left;
     font-size: 24px;
-
     &:hover {
-    background: $nav-hover;
+      background: $nav-trans;
   }
     @media screen and (max-width: $break-medium) {
       box-sizing: border-box;
       width: 100%;
       padding: 15px;
       text-align: left;
+    }
   }
-}
 }
  .handle {
    width: 100%;
@@ -82,16 +93,16 @@ position: relative;
    padding: 3px 10px;
    margin-top: -7px;
    cursor: pointer;
-  display: block;
+    display: block;
    h3 {
      font-size: 28px;
      display: inline-block;
    }
-   i {
-     display: inline-block;
-     float: right;
-     margin-top: 10px;
- }
+      i {
+       display: inline-block;
+       float: right;
+       margin-top: 10px;
+   }
  }
 
 .container {
@@ -99,6 +110,8 @@ position: relative;
   margin-bottom: 60px;
   width: 90%;
   section {
+    font-family: $test-font;
+    font-size: $body-font-size;
     width: 250px;
     margin: 0;
     float: left;
@@ -113,27 +126,26 @@ position: relative;
     @media screen and(max-width: $break-medium) {
       width: 100%;
       margin: 0 auto 15px auto;
-
-    }
-    img {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 2px 2px 3px $light-grey;
-  position: relative;
-  float: left;
-  margin-right: 20px;
-  transition: all .2s ease-in-out;
-  &:hover {
-transform: scale(1.1);
 }
+    img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 2px 2px 3px $light-grey;
+      position: relative;
+      float: left;
+      margin-right: 18px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+  }
 }
     h2 {
       font-family: $heading-font;
-      font-size: 30px;
-    }
+      font-size: $heading-font-size;
   }
+}
 #side-image {
   float: right;
   width: 70%;
@@ -141,16 +153,16 @@ transform: scale(1.1);
   margin: 0;
   display: inline-block;
   z-index: 20;
-@media screen and(max-width: $break-medium) {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 3px;
-  border: 15px double $green;
-  box-shadow: 3px 3px 3px $green;
-}
-}
+  @media screen and(max-width: $break-medium) {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 3px;
+    border: 15px double $green;
+    box-shadow: 3px 3px 3px $green;
+    }
+  }
 }
 .clearfix {
   width: 35%;
@@ -161,7 +173,7 @@ transform: scale(1.1);
     margin-top: -20px;
   }
 aside {
-  border: 5px;
+  border: 8px;
   box-shadow: 2px 1px 1px $light-grey;
   -webkit-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
   -o-border-image: url("/images/Gold-Foil-Background-1.jpg") 5 round;
@@ -169,21 +181,37 @@ aside {
   float: right;
   clear: left;
   width: 90%;
+  height: 900px;
   padding: 10px;
   box-sizing: border-box;
   display: inline-block;
   margin-bottom: 20px;
+  font-family: $test-font;
+  @media screen and (max-width: $break-medium) {
+    height: 800px;
+  }
+  @media screen and (max-width: $break-small) {
+    height: 900px;
+  }
+  @media screen and (max-width: $break-xsmall) {
+    height: 1000px;
+  }
     h2 {
-    font-family: $heading-font;
-    font-size: $heading-font-size;
+      font-family: $heading-font;
+      font-size: $heading-font-size;
+
+  }
+  p {
+    font-size: $body-font-size;
   }
   ul {
     list-style-type: none;
+    font-size: $body-font-size;
   }
   .info {
     display: block;
     margin: 0 auto;
-    float: right;
+    position: relative;
     background-color: $pop-pink;
     color: white;
     font-size: 20px;
@@ -201,7 +229,9 @@ aside {
 
 .gallery {
   width: 60%;
-  height: 800px;
+  height: 900px;
+  margin-top: 0;
+  margin-bottom: 10px;
   margin-left: 4%;
   overflow: scroll;
   display: inline-block;
@@ -219,6 +249,7 @@ aside {
     font-size: 60px;
     font-family: $heading-font;
     text-align:center;
+    margin-top: 0;
     background: image-url("Gold-Foil-Background-1.jpg") no-repeat center;
     background-position: center;
     background-size: cover;
@@ -235,12 +266,12 @@ aside {
       box-sizing: border-box;
     }
   &:hover {
-    transform: scale(1.1);
-    -webkit-transition: all 1s ease;
+   transform: scale(1.1);
+   -webkit-transition: all 1s ease;
    -moz-transition: all 1s ease;
-     -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-        transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+   transition: all 1s ease;
   }
 }
 #image1 {
@@ -253,7 +284,7 @@ aside {
   float: left;
     @media screen and(max-width: $break-small)  {
       width: 100%;
-}
+  }
 }
 #image3 {
   width:50%;
@@ -261,7 +292,7 @@ aside {
   float: right;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image4 {
   width: 40%;
@@ -269,7 +300,7 @@ aside {
   float:left;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image5 {
   float: right;
@@ -277,7 +308,7 @@ aside {
   height: 300px;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image6 {
   width: 51%;
@@ -285,7 +316,7 @@ aside {
   float: left;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image7 {
   width: 49%;
@@ -293,99 +324,116 @@ aside {
   float: right;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image8 {
   width: 100%;
     height: auto;
     @media screen and(max-width: $break-small)  {
       width: 100%;
-}
+  }
 }
 #image9 {
   width: 45.4%;
   float: left;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
-
+  }
 }
 #image10 {
   width: 54.6%;
   float: right;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image11 {
   width: 44%;
   float: right;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image12 {
   width: 56%;
   float: left;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image13 {
   width:  42.5%;
   float: right;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image14 {
   width: 57.5%;
   float: left;
   @media screen and(max-width: $break-small)  {
     width: 100%;
-}
+  }
 }
 #image15 {
   width: 100%;
-}
+  }
 }
 .contact {
   clear: both;
-  position: relative;
-  width: 60%;
+  background: image-url("contact-jumbo.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
   @media screen and (max-width: $break-medium) {
-    width: 100%;
+    width: 82%;
+    margin: 0 auto;
   }
 section {
   display: inline-block;
-  width: 50%;
-  text-align: left;
-  float: left;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
   box-sizing: border-box;
   padding: 3px 8px;
  h2 {
+   text-align: left;
    font-family: $heading-font;
-   font-size: 45px;
- }
- }
- }
- .info {
-   float: right;
+   font-size: 48px;
+}
+ p {
+   width:50%;
+   text-align: left;
+   font-size: $contact-font-size;
+   font-family: $test-font;
+   @media screen and (max-width: $break-medium) {
+    font-size: $body-font-size;
+  }
+}
+   .info {
    display:inline-block;
-   background-color: $pop-pink;
+   background-color: transparent;
    font-size: 25px;
    border: 2px solid white;
    border-radius: 4px;
    padding: 6px 10px;
-   margin: 70px 30px 0 0;
+   position: relative;
+   margin: 20px 0;
+   float: left;
    font-family: $heading-font;
+ }
  a {
    text-decoration: none;
    color: white;
- }
+   &:hover {
+     color: $green;
+       }
+     }
+   }
  }
  footer {
    font-family: $heading-font;
+   margin: 0 auto;
+   text-align: center;
    height: 20px;
    width:100%;
    position: absolute;
